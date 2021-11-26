@@ -49,6 +49,8 @@ class Maeum_main:
     def DonateButton(self):
         mainDonateButton = DONATE.Donate(self.main)
 
+
+
     # TOP3 페이지로 넘기기
     def Top3Button(self):
         mainTop3Button = TOP3.Top3(self.main)
