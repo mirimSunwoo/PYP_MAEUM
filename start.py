@@ -1,15 +1,37 @@
 import tkinter
-import os
-print (os.path.dirname(os.path.realpath(__file__)) ) #프로젝트 소스코드 파일 경로 출력
+from tkinter import *
+import MAEUM_MAIN
 
-root=tkinter.Tk()
-root.title("blog")
-root.geometry("1440x800")
-root.resizable(0, 0)
-image=tkinter.PhotoImage(file="./image/Group 20.png") #PhotoImage를 통한 이미지 지정
-label=tkinter.Label(root, image=image) #라벨 생성, 라벨에는 앞서 선언한 이미지가 들어감.
-label.pack()
+class Start:
+    def __init__(self, start):
+        self.start = start
 
-root.mainloop()
+        # 화면 이미지
+        self.startBack = tkinter.PhotoImage(file = "./image/background.png")
+        self.startBackL = tkinter.Label(image=self.startBack)
+        self.startBackL.place(x=-2, y=-2)
 
-print('들리니')
+        # start 버튼
+
+        self.ws = Tk()
+        # ws.title('PythonGuides')
+        # ws.geometry('300x200')
+        self.dwnd = PhotoImage(file='image/btn_start.png')
+        self.Button(ws, image=dwnd, command=None, borderwidth=0).pack(pady=10)
+
+        self.ws.mainloop()
+    def move(self):
+        start_move = MAEUM_MAIN.Maeum_main.maeum_main(self.start)
+        pass
+
+    def play(self):
+        self.start.mainloop()
+
+if __name__ == '__main__':
+    start = tkinter.Tk()
+    start.title("마음을 나눠요")
+    start.geometry("882x628")
+    start.resizable(False, False)
+
+    start = Start(start)
+    start.play()
