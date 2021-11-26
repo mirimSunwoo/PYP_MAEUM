@@ -11,3 +11,5 @@ label=tkinter.Label(root, image=image) #라벨 생성, 라벨에는 앞서 선�
 label.pack()
 
 root.mainloop()
+
+print('들리니')
