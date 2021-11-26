@@ -1,16 +1,13 @@
-from tkinter import *
+import tkinter
+import os
+print (os.path.dirname(os.path.realpath(__file__)) ) #프로젝트 소스코드 파일 경로 출력
 
-root = Tk()
-root.title('사진불러오기')
-root.geometry('800x600')
-
-img = ImageTk.PhotoImage(Image.open('./002.png'))
-label = Label(image=img)
+root=tkinter.Tk()
+root.title("blog")
+root.geometry("1440x800")
+root.resizable(0, 0)
+image=tkinter.PhotoImage(file="./image/Group 20.png") #PhotoImage를 통한 이미지 지정
+label=tkinter.Label(root, image=image) #라벨 생성, 라벨에는 앞서 선언한 이미지가 들어감.
 label.pack()
 
-quit = Button(root, text='종료하기', command=root.quit)
-quit.pack()
-
 root.mainloop()
-
-
