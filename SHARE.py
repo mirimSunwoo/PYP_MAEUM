@@ -8,5 +8,15 @@ class Share:
     def __init__(self, share):
         self.share = share
 
-    self.shareBack = tkinter.PhotoImage(file = "img/background.gif")
-    print("system.out.println")
+        #share 화면 이미지
+        self.shareBack = tkinter.PhotoImage(file = "img/background.gif")
+        self.shareBackL = tkinter.Label(img = self.shareBack)
+        self.shareBackL.place(x= -2, y= -2)
+
+        #
+
+
+
+
+
+
