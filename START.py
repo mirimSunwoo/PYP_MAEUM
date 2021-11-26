@@ -6,15 +6,14 @@ class Start:
     def __init__(self, start):
         self.start = start
 
-
         #화면 이미지
-        self.startBack = tkinter.PhotoImage(file = "img/StartBack.PNG")
+        self.startBack = tkinter.PhotoImage(file="img/StartBack.PNG")
         self.startBackL = tkinter.Label(image=self.startBack)
         self.startBackL.place(x=-2, y=-2)
 
-        # start 버튼 dlsjflkdsjf
-        self.startButton = tkinter.Button(self.start, width=350, height=50, borderwidth=0, command=self.move)
-        self.startButton.place(x=15, y=390)
+        # start 버튼
+        self.startButton = tkinter.Button(self.start, width=366, height=70, borderwidth=0, command=self.move)
+        self.startButton.place(x=250, y=450)
         self.startButtonImg = tkinter.PhotoImage(file="img/start.png")
         self.startButton.config(image=self.startButtonImg)
 
@@ -31,7 +30,7 @@ class Start:
 if __name__ == '__main__':
     start = tkinter.Tk()
     start.title("마음을 나눠요")
-    start.geometry("882x628+250+250")
+    start.geometry("882x628+100+100")
     start.resizable(False, False)
 
     start = Start(start)
