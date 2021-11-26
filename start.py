@@ -1,28 +1,29 @@
 import tkinter
-from tkinter import *
+
 import MAEUM_MAIN
 
 class Start:
     def __init__(self, start):
         self.start = start
 
-        # 화면 이미지
-        self.startBack = tkinter.PhotoImage(file = "./image/background.png")
+
+        #화면 이미지
+        self.startBack = tkinter.PhotoImage(file = "img/StartBack.PNG")
         self.startBackL = tkinter.Label(image=self.startBack)
         self.startBackL.place(x=-2, y=-2)
 
-        # start 버튼
+        # start 버튼 dlsjflkdsjf
+        self.startButton = tkinter.Button(self.start, width=350, height=50, borderwidth=0, command=self.move)
+        self.startButton.place(x=15, y=390)
+        self.startButtonImg = tkinter.PhotoImage(file="img/start.png")
+        self.startButton.config(image=self.startButtonImg)
 
-        self.ws = Tk()
-        # ws.title('PythonGuides')
-        # ws.geometry('300x200')
-        self.dwnd = PhotoImage(file='image/btn_start.png')
-        self.Button(ws, image=dwnd, command=None, borderwidth=0).pack(pady=10)
+        #self.startFont = tkinter.font.Font(size=11, weight="bold")
+        #self.startButton = tkinter.Button(self.start, text="START", command=self.move, foreground="#9b95b7", width=10, repeatdelay=20, font=self.startFont)
+        #self.startButton.place(x=350, y=60)
 
-        self.ws.mainloop()
     def move(self):
-        start_move = MAEUM_MAIN.Maeum_main.maeum_main(self.start)
-        pass
+        start_move = MAEUM_MAIN.Maeum_main(self.start)
 
     def play(self):
         self.start.mainloop()
@@ -30,7 +31,7 @@ class Start:
 if __name__ == '__main__':
     start = tkinter.Tk()
     start.title("마음을 나눠요")
-    start.geometry("882x628")
+    start.geometry("882x628+250+250")
     start.resizable(False, False)
 
     start = Start(start)
