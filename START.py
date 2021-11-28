@@ -11,19 +11,14 @@ class Start:
         self.startBackL = tkinter.Label(image=self.startBack)
         self.startBackL.place(x=-2, y=-2)
 
-
-        # start 버튼 dlsjflkdsjf dksjfslalflweififjoijfoijaslkfjls
+        # start 버튼
         self.startButton = tkinter.Button(self.start, width=366, height=70, borderwidth=0, command=self.move)
         self.startButton.place(x=250, y=430)
         self.startButtonImg = tkinter.PhotoImage(file="img/start.png")
         self.startButton.config(image=self.startButtonImg)
 
-        #self.startFont = tkinter.font.Font(size=11, weight="bold")
-        #self.startButton = tkinter.Button(self.start, text="START", command=self.move, foreground="#9b95b7", width=10, repeatdelay=20, font=self.startFont)
-        #self.startButton.place(x=350, y=60)
-
     def move(self):
-        start_move = MAEUM_MAIN.Maeum_main(self.start)
+        MAEUM_MAIN.Maeum_main(self.start)
 
     def play(self):
         self.start.mainloop()
@@ -31,7 +26,7 @@ class Start:
 if __name__ == '__main__':
     start = tkinter.Tk()
     start.title("마음을 나눠요")
-    start.geometry("882x628+250+250")
+    start.geometry("882x628+400+100")
     start.resizable(False, False)
 
     start = Start(start)
