@@ -4,12 +4,13 @@ import tkinter.font
 import START
 import MAEUM_MAIN
 
-import donate_file.JACKET_DONATE
-import donate_file.CARDIGAN_DONATE
-import donate_file.VEST_DONATE
-import donate_file.PANTS_DONATE
-import donate_file.SHIRTS_DONATE
-import donate_file.NECKTIE_DONATE
+import JACKET_DONATE
+import CARDIGAN_DONATE
+import PANTS_DONATE
+import SHIRTS_DONATE
+import VEST_DONATE
+import NECKTIE_DONATE
+
 
 class Donate:
     def __init__(self, donate):
@@ -57,19 +58,19 @@ class Donate:
         self.necktieButton.config(image=self.necktieButtonImg)
 
     def JacketButton(self):
-        donate_file.JACKET_DONATE.Jacket(self.donate)
+        JACKET_DONATE.Jacket_donate(self.donate)
 
     def CardiganButton(self):
-        donate_file.CARDIGAN_DONATE.Cardigan(self.donate)
+        CARDIGAN_DONATE.Cardigan_donate(self.donate)
 
     def PantsButton(self):
-        donate_file.PANTS_DONATE.Pants(self.donate)
+        PANTS_DONATE.Pants_donate(self.donate)
 
     def ShirtsButton(self):
-        donate_file.SHIRTS_DONATE.Shirts(self.donate)
+        SHIRTS_DONATE.Shirts_donate(self.donate)
 
     def VestButton(self):
-        donate_file.VEST_DONATE.Vest(self.donate)
+        VEST_DONATE.Vest_donate(self.donate)
 
     def NecktieButton(self):
-        donate_file.NECKTIE_DONATE.Necktie(self.donate)
+        NECKTIE_DONATE.Necktie_donate(self.donate)

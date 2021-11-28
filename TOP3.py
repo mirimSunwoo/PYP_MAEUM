@@ -10,5 +10,5 @@ class Top3:
 
         # share 화면 이미지
         self.top3Back = tkinter.PhotoImage(file="img/background.gif")
-        self.top3BackL = tkinter.Label(img=self.top3Back)
+        self.top3BackL = tkinter.Label(image=self.top3Back)
         self.top3BackL.place(x=-2, y=-2)

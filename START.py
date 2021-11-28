@@ -7,7 +7,7 @@ class Start:
         self.start = start
 
         #화면 이미지
-        self.startBack = tkinter.PhotoImage(file = "img/StartBack.PNG")
+        self.startBack = tkinter.PhotoImage(file ="img/StartBack.PNG")
         self.startBackL = tkinter.Label(image=self.startBack)
         self.startBackL.place(x=-2, y=-2)
 
