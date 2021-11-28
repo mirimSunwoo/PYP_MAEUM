@@ -58,6 +58,12 @@ class Donate:
         self.necktieButtonImg = tkinter.PhotoImage(file="img/necktie.png")
         self.necktieButton.config(image=self.necktieButtonImg)
 
+        #back 버튼
+        self.backButton = tkinter.Button(self.donate, width=130, height=75, borderwidth=0, command=self.BackButton)
+        self.backButton.place(x=750, y=9)
+        self.backButtonImg = tkinter.PhotoImage(file="img/back_blue.PNG")
+        self.backButton.config(image=self.backButtonImg)
+
     def JacketButton(self):
         JACKET_DONATE.Jacket_donate(self.donate)
 
@@ -75,3 +81,6 @@ class Donate:
 
     def NecktieButton(self):
         NECKTIE_DONATE.Necktie_donate(self.donate)
+
+    def BackButton(self):
+        MAEUM_MAIN.Maeum_main(self.donate)
