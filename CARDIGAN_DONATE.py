@@ -44,6 +44,8 @@ class Cardigan_donate:
             #if combobox.get() == school[0]:
 
 
+
+
         #레이블 박스 버튼
         btn = Button(cardigan_donate)  # root라는 창에 버튼 생성
         btn.config(text="선택")  # 버튼 내용

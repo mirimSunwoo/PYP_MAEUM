@@ -17,9 +17,9 @@ class Donate:
         self.donate = donate
 
         # 화면 이미지
-        self.startBack = tkinter.PhotoImage(file="img/donate_back.png")
-        self.startBackL = tkinter.Label(image=self.startBack)
-        self.startBackL.place(x=-2, y=-2)
+        self.donateBack = tkinter.PhotoImage(file="img/donate_back.png")
+        self.donateBackL = tkinter.Label(image=self.donateBack)
+        self.donateBackL.place(x=-2, y=-2)
 
         # jacket 버튼
         self.jacketButton = tkinter.Button(self.donate, width=210, height=205, borderwidth=0, command=self.JacketButton)

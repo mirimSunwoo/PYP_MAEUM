@@ -1,5 +1,6 @@
 import tkinter
 
+import MAEUM_MAIN
 import START
 
 class Thank_donate:
@@ -19,5 +20,5 @@ class Thank_donate:
 
     # home 페이지로 가기
     def HomeButton(self):
-        START.Start(self.thank_donate)
+        MAEUM_MAIN.Maeum_main(self.thank_donate)
 
