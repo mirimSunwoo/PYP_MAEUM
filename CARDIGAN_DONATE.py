@@ -41,6 +41,33 @@ class Cardigan_donate:
             school_lb.config(text=school)
             school_lb.place(x=500, y=175)
 
+
+            if school[0] == '미림마이스터고':
+                file = open('미림마이스터고.txt', 'a')
+                file.write('미림 플러스1')
+                file.close()
+
+                file = open('미림마이스터고.txt', 'r')
+                print(file.read())
+                file.close()
+
+            elif school[0] == '선린인터넷고':
+                file = open('선린인터넷고.txt', 'a')
+                file.write('선린 플러스1')
+                file.close()
+
+                file = open('선린인터넷고.txt', 'r')
+                print(file.read())
+                file.close()
+
+            elif school[0] == '디지털미디어고':
+                file = open('디지털미디어고.txt', 'a')
+                file.write('디미 플러스1')
+                file.close()
+
+                file = open('디지털미디어고.txt', 'r')
+                print(file.read())
+                file.close()
             #if combobox.get() == school[0]:
 
 
@@ -158,7 +185,7 @@ class Cardigan_donate:
         self.backButtonImg = tkinter.PhotoImage(file="img/back_blue.PNG")
         self.backButton.config(image=self.backButtonImg)
 
-    def T_D_Button(self):
+    def T_D_Button (self):
         THANK_DONATE.Thank_donate(self.cardigan_donate)
 
     def BackButton(self):
