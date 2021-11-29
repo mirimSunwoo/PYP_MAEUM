@@ -16,27 +16,27 @@ class Maeum_main:
         self.Maeum_mainBackL.place(x=-2, y=-2)
 
         # share 버튼
-        self.shareButton = tkinter.Button(self.main, width=366, height=70, borderwidth=0, command=self.ShareButton)
-        self.shareButton.place(x=250, y=150)
-        self.shareButtonImg = tkinter.PhotoImage(file="img/share.PNG")
+        self.shareButton = tkinter.Button(self.main, width=437, height=133, borderwidth=0, command=self.ShareButton)
+        self.shareButton.place(x=200, y=100)
+        self.shareButtonImg = tkinter.PhotoImage(file="img/Group 103.png")
         self.shareButton.config(image=self.shareButtonImg)
 
         # donate 버튼
-        self.donateButton = tkinter.Button(self.main, width=366, height=70, borderwidth=0, command=self.DonateButton)
-        self.donateButton.place(x=250, y=298)
-        self.donateButtonImg = tkinter.PhotoImage(file="img/donate.png")
+        self.donateButton = tkinter.Button(self.main, width=437, height=133, borderwidth=0, command=self.DonateButton)
+        self.donateButton.place(x=200, y=270)
+        self.donateButtonImg = tkinter.PhotoImage(file="img/Group 106.png")
         self.donateButton.config(image=self.donateButtonImg)
 
         # top3 버튼
-        self.top3Button = tkinter.Button(self.main, width=366, height=70, borderwidth=0, command=self.Top3Button)
-        self.top3Button.place(x=250, y=450)
-        self.top3ButtonImg = tkinter.PhotoImage(file="img/top3.png")
+        self.top3Button = tkinter.Button(self.main, width=437, height=133, borderwidth=0, command=self.Top3Button)
+        self.top3Button.place(x=200, y=440)
+        self.top3ButtonImg = tkinter.PhotoImage(file="img/Group 107.png")
         self.top3Button.config(image=self.top3ButtonImg)
 
         # 회원가입 버튼
-        self.loginButton = tkinter.Button(self.main, width=70, height=70, borderwidth=0, command=self.LoginButton)
+        self.loginButton = tkinter.Button(self.main, width=81, height=81, borderwidth=0, command=self.LoginButton)
         self.loginButton.place(x=720, y=30)
-        self.loginButtonImg = tkinter.PhotoImage(file="img/login.png")
+        self.loginButtonImg = tkinter.PhotoImage(file="img/Group 102.png")
         self.loginButton.config(image=self.loginButtonImg)
 
     # SHARE 페이지로 넘기기
