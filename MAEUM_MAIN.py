@@ -3,8 +3,8 @@ import tkinter
 
 import SHARE
 import DONATE
+import START
 import TOP3
-import LOGIN
 
 class Maeum_main:
     def __init__(self, main):
@@ -16,28 +16,28 @@ class Maeum_main:
         self.Maeum_mainBackL.place(x=-2, y=-2)
 
         # share 버튼
-        self.shareButton = tkinter.Button(self.main, width=437, height=133, borderwidth=0, command=self.ShareButton)
-        self.shareButton.place(x=200, y=100)
-        self.shareButtonImg = tkinter.PhotoImage(file="img/menu_share.png")
+        self.shareButton = tkinter.Button(self.main, width=435, height=131, borderwidth=0, command=self.ShareButton)
+        self.shareButton.place(x=210, y=100)
+        self.shareButtonImg = tkinter.PhotoImage(file="img/share.png")
         self.shareButton.config(image=self.shareButtonImg)
 
         # donate 버튼
-        self.donateButton = tkinter.Button(self.main, width=437, height=133, borderwidth=0, command=self.DonateButton)
-        self.donateButton.place(x=200, y=270)
-        self.donateButtonImg = tkinter.PhotoImage(file="img/menu_donate.png")
+        self.donateButton = tkinter.Button(self.main,  width=435, height=131,  borderwidth=0, command=self.DonateButton)
+        self.donateButton.place(x=210, y=270)
+        self.donateButtonImg = tkinter.PhotoImage(file="img/donate.png")
         self.donateButton.config(image=self.donateButtonImg)
 
         # top3 버튼
-        self.top3Button = tkinter.Button(self.main, width=437, height=133, borderwidth=0, command=self.Top3Button)
-        self.top3Button.place(x=200, y=440)
-        self.top3ButtonImg = tkinter.PhotoImage(file="img/menu_top3.png")
+        self.top3Button = tkinter.Button(self.main,  width=435, height=131, borderwidth=0, command=self.Top3Button)
+        self.top3Button.place(x=210, y=440)
+        self.top3ButtonImg = tkinter.PhotoImage(file="img/top3.png")
         self.top3Button.config(image=self.top3ButtonImg)
 
-        # 회원가입 버튼
-        self.loginButton = tkinter.Button(self.main, width=81, height=81, borderwidth=0, command=self.LoginButton)
-        self.loginButton.place(x=720, y=30)
-        self.loginButtonImg = tkinter.PhotoImage(file="img/menu_home.png")
-        self.loginButton.config(image=self.loginButtonImg)
+        # home 버튼
+        self.homeButton = tkinter.Button(self.main, width=72, height=72, borderwidth=0, command=self.HomeButton)
+        self.homeButton.place(x=755, y=30)
+        self.homeButtonImg = tkinter.PhotoImage(file="img/home_y.png")
+        self.homeButton.config(image=self.homeButtonImg)
 
     # SHARE 페이지로 넘기기
     def ShareButton(self):
@@ -51,6 +51,6 @@ class Maeum_main:
     def Top3Button(self):
         TOP3.Top3(self.main)
 
-    # LOGIN 페이지로 넘기기
-    def LoginButton(self):
-        LOGIN.Login(self.main)
+    # home 페이지로 가기
+    def HomeButton(self):
+        START.Start(self.main)
