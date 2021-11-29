@@ -13,8 +13,8 @@ class Start:
         self.startBackL.place(x=-2, y=-2)
 
         # start 버튼
-        self.startButton = tkinter.Button(self.start, width=366, height=70, borderwidth=0, command=self.move)
-        self.startButton.place(x=250, y=430)
+        self.startButton = tkinter.Button(self.start, width=250, height=70, borderwidth=0, command=self.move)
+        self.startButton.place(x=320, y=430)
         self.startButtonImg = tkinter.PhotoImage(file="img/start.png")
         self.startButton.config(image=self.startButtonImg)
 
