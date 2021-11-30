@@ -11,9 +11,10 @@ import THANK_DONATE
 class Jacket_donate:
     def __init__(self, jacket_donate):
         self.jacket_donate = jacket_donate
+        self.school = []
 
         # 화면 이미지
-        self.Jacket_donateBack = tkinter.PhotoImage(file="img/donate_back.png")
+        self.Jacket_donateBack = tkinter.PhotoImage(file="img/donate_check_back.png")
         self.Jacket_donateBackL = tkinter.Label(image=self.Jacket_donateBack)
         self.Jacket_donateBackL.place(x=-2, y=-2)
 
@@ -34,11 +35,9 @@ class Jacket_donate:
 
         #레이블 선택되었음
         def school_check():
-            school = []
-            school.append(combobox.get())
-            school.append("선택")
-            school_lb.config(text=school)
-            school_lb.place(x=500, y=175)
+            self.school = combobox.get()
+            school_lb.config(text=f'{self.school} 선택')
+            school_lb.place(x=670, y=175)
 
         #레이블 박스 버튼
         btn = Button(jacket_donate)  # root라는 창에 버튼 생성
@@ -58,9 +57,9 @@ class Jacket_donate:
         btn_size2 = Radiobutton(jacket_donate, text="M", value="M", variable=size_lang_var)
         btn_size3 = Radiobutton(jacket_donate, text="L ", value="L", variable=size_lang_var)
 
-        btn_size1.place(x=500, y=210)  # 라디오 버튼 배치
-        btn_size2.place(x=500, y=240)
-        btn_size3.place(x=500, y=270)
+        btn_size1.place(x=600, y=210)  # 라디오 버튼 배치
+        btn_size2.place(x=600, y=240)
+        btn_size3.place(x=600, y=270)
 
         #size 선택되었음
         def size_check():
@@ -68,18 +67,18 @@ class Jacket_donate:
             size.append(size_lang_var.get())
             size.append("선택")
             size_lb.config(text=size)
-            size_lb.place(x=570, y=255)
+            size_lb.place(x=670, y=255)
 
         #size 버튼
         size_btn = Button(jacket_donate)  # root라는 창에 버튼 생성
         size_btn.config(text="선택")  # 버튼 내용
         size_btn.config(width=10)  # 버튼 크기
         size_btn.config(command=size_check)  # 버튼 기능 (btnpree() 함수 호출)
-        size_btn.place(x=570, y=225)  # 버튼 배치
+        size_btn.place(x=670, y=225)  # 버튼 배치
 
         #size 선택되었음 대기
         size_lb = Label(jacket_donate)  # root라는 창에 레이블 생성
-        size_lb.place(x=570, y=225)  # 레이블 배치
+        size_lb.place(x=670, y=225)  # 레이블 배치
 
         #gender 라디오
         gender_lang_var = StringVar()  # str 형으로 변수 저장
@@ -87,8 +86,8 @@ class Jacket_donate:
         btn_gender1.select()  # 기본값 선택
         btn_gender2 = Radiobutton(jacket_donate, text="여", value="여", variable=gender_lang_var)
 
-        btn_gender1.place(x=500, y=315)  # 라디오 버튼 배치
-        btn_gender2.place(x=500, y=345)
+        btn_gender1.place(x=600, y=315)  # 라디오 버튼 배치
+        btn_gender2.place(x=600, y=345)
 
         # gender 선택되었음
         def gender_check():
@@ -96,30 +95,30 @@ class Jacket_donate:
             gender.append(gender_lang_var.get())
             gender.append("선택")
             gender_lb.config(text=gender)
-            gender_lb.place(x=570, y=345)
+            gender_lb.place(x=670, y=345)
 
         # gender 버튼
         gender_btn = Button(jacket_donate)  # root라는 창에 버튼 생성
         gender_btn.config(text="선택")  # 버튼 내용
         gender_btn.config(width=10)  # 버튼 크기
         gender_btn.config(command=gender_check)  # 버튼 기능 (btnpree() 함수 호출)
-        gender_btn.place(x=570, y=315)  # 버튼 배치
+        gender_btn.place(x=670, y=315)  # 버튼 배치
 
         # gender 선택되었음 대기
         gender_lb = Label(jacket_donate)  # root라는 창에 레이블 생성
-        gender_lb.place(x=570, y=320)  # 레이블 배치
+        gender_lb.place(x=670, y=320)  # 레이블 배치
 
 
         #defect 라디오
         defect_lang_var = StringVar()  # str 형으로 변수 저장
-        btn_defect1 = Radiobutton(jacket_donate, text="1 ", value="약", variable=defect_lang_var)
+        btn_defect1 = Radiobutton(jacket_donate, text="약", value="약", variable=defect_lang_var)
         btn_defect1.select()  # 기본값 선택
-        btn_defect2 = Radiobutton(jacket_donate, text="3 ", value="중", variable=defect_lang_var)
-        btn_defect3 = Radiobutton(jacket_donate, text="5 ", value="강", variable=defect_lang_var)
+        btn_defect2 = Radiobutton(jacket_donate, text="중", value="중", variable=defect_lang_var)
+        btn_defect3 = Radiobutton(jacket_donate, text="강", value="강", variable=defect_lang_var)
 
-        btn_defect1.place(x=500, y=390)  # 라디오 버튼 배치
-        btn_defect2.place(x=500, y=420)
-        btn_defect3.place(x=500, y=450)
+        btn_defect1.place(x=600, y=390)  # 라디오 버튼 배치
+        btn_defect2.place(x=600, y=420)
+        btn_defect3.place(x=600, y=450)
 
         # defect 선택되었음
         def defect_check():
@@ -127,18 +126,18 @@ class Jacket_donate:
             defect.append(defect_lang_var.get())
             defect.append("선택")
             defect_lb.config(text=defect)
-            defect_lb.place(x=570, y=435)
+            defect_lb.place(x=670, y=435)
 
         # defect 버튼
         defect_btn = Button(jacket_donate)  # root라는 창에 버튼 생성
         defect_btn.config(text="선택")  # 버튼 내용
         defect_btn.config(width=10)  # 버튼 크기
         defect_btn.config(command=defect_check)  # 버튼 기능 (btnpree() 함수 호출)
-        defect_btn.place(x=570, y=405)  # 버튼 배치
+        defect_btn.place(x=670, y=405)  # 버튼 배치
 
         # defect 선택되었음 대기
         defect_lb = Label(jacket_donate)  # root라는 창에 레이블 생성
-        defect_lb.place(x=570, y=405)  # 레이블 배치
+        defect_lb.place(x=670, y=405)  # 레이블 배치
 
         # go_dona 버튼
         self.go_donaButton = tkinter.Button(self.jacket_donate, width=268, height=68, borderwidth=0, command=self.T_D_Button)
@@ -154,6 +153,38 @@ class Jacket_donate:
 
     def T_D_Button(self):
         THANK_DONATE.Thank_donate(self.jacket_donate)
+        if self.school == '미림마이스터고':
+            file = open('미림마이스터고.txt', 'r', encoding="UTF-8")
+            m_lines = file.readlines()
+            for m_line in m_lines:
+                m_lis = int(m_line)
+                m = m_lis + 1
+
+            file = open('미림마이스터고.txt', 'w', encoding="UTF-8")
+            file.write(str(m))
+            file.close()
+
+        elif self.school == '선린인터넷고':
+            file = open('선린인터넷고.txt', 'r', encoding="UTF-8")
+            s_lines = file.readlines()
+            for s_line in s_lines:
+                s_lis = int(s_line)
+                s = s_lis + 1
+
+            file = open('선린인터넷고.txt', 'w', encoding="UTF-8")
+            file.write(str(s))
+            file.close()
+
+        elif self.school == '디지털미디어고':
+            file = open('디지털미디어고.txt', 'r', encoding="UTF-8")
+            d_lines = file.readlines()
+            for d_line in d_lines:
+                d_lis = int(d_line)
+                d = d_lis + 1
+
+            file = open('디지털미디어고.txt', 'w', encoding="UTF-8")
+            file.write(str(d))
+            file.close()
 
     def BackButton(self):
         DONATE.Donate(self.jacket_donate)
