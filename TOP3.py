@@ -50,8 +50,6 @@ class Top3:
         t3.config(text=count_dic[2][0], bg='white', font='Times 32 bold italic')
         t3.place(x= 300, y=462)  # 레이블 배치
 
-
-
         #back 버튼
         self.backButton = tkinter.Button(self.top3, width=120, height=67, borderwidth=0, command=self.BackButton)
         self.backButton.place(x=750, y=27)

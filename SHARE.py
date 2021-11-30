@@ -26,6 +26,7 @@ class Share:
         self.ent2 = tkinter.Entry(share)  # TD라는 창에 입력창 생성
         self.ent2.place(x=350, y=280)
 
+
         self.ent3 = tkinter.Entry(share)  # TD라는 창에 입력창 생성
         self.ent3.place(x=350, y=360)
 

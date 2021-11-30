@@ -115,6 +115,7 @@ class Shirts_donate:
         btn_defect2 = Radiobutton(shirts_donate, text="중", value="중", variable=defect_lang_var)
         btn_defect3 = Radiobutton(shirts_donate, text="강", value="강", variable=defect_lang_var)
 
+
         btn_defect1.place(x=600, y=390)  # 라디오 버튼 배치
         btn_defect2.place(x=600, y=420)
         btn_defect3.place(x=600, y=450)

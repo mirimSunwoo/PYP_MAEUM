@@ -143,6 +143,7 @@ class Vest_donate:
         self.go_donaButtonImg = tkinter.PhotoImage(file="img/go_dona.png")
         self.go_donaButton.config(image=self.go_donaButtonImg)
 
+
         # back 버튼
         self.backButton = tkinter.Button(self.vest_donate, width=130, height=75, borderwidth=0, command=self.BackButton)
         self.backButton.place(x=750, y=9)

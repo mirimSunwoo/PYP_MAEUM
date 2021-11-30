@@ -13,6 +13,7 @@ if check == s_list[0]:
     file.write(str(m))
     file.close()
 
+
 elif check == s_list[1]:
     file = open('선린인터넷고.txt', 'r', encoding="UTF-8")
     s_lines = file.readlines()
