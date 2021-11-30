@@ -1,7 +1,7 @@
 import tkinter
 
 import MAEUM_MAIN
-import THANK_DONATE
+import THANK_SHARE
 
 
 class Share:
@@ -39,7 +39,7 @@ class Share:
         self.backButton.config(image=self.backButtonImg)
 
     def T_D_Button(self):
-        THANK_DONATE.Thank_donate(self.share)
+        THANK_SHARE.Thank_share(self.share)
 
     def BackButton(self):
         MAEUM_MAIN.Maeum_main(self.share)
