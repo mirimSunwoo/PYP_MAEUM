@@ -3,7 +3,6 @@ import tkinter
 from tkinter import *  # tkinter 라이브러리에 모든 함수를 사용하겠다.
 from tkinter import ttk
 
-import START
 import MAEUM_MAIN
 import DONATE
 
@@ -40,38 +39,6 @@ class Cardigan_donate:
             school.append("선택")
             school_lb.config(text=school)
             school_lb.place(x=500, y=175)
-
-
-            if school[0] == '미림마이스터고':
-                file = open('미림마이스터고.txt', 'a')
-                file.write('미림 플러스1')
-                file.close()
-
-                file = open('미림마이스터고.txt', 'r')
-                print(file.read())
-                file.close()
-
-            elif school[0] == '선린인터넷고':
-                file = open('선린인터넷고.txt', 'a')
-                file.write('선린 플러스1')
-                file.close()
-
-                file = open('선린인터넷고.txt', 'r')
-                print(file.read())
-                file.close()
-
-            elif school[0] == '디지털미디어고':
-                file = open('디지털미디어고.txt', 'a')
-                file.write('디미 플러스1')
-                file.close()
-
-                file = open('디지털미디어고.txt', 'r')
-                print(file.read())
-                file.close()
-            #if combobox.get() == school[0]:
-
-
-
 
         #레이블 박스 버튼
         btn = Button(cardigan_donate)  # root라는 창에 버튼 생성
@@ -187,6 +154,41 @@ class Cardigan_donate:
 
     def T_D_Button (self):
         THANK_DONATE.Thank_donate(self.cardigan_donate)
+        if school[0] == '미림마이스터고':
+            file = open('미림마이스터고.txt', 'r', encoding="UTF-8")
+            m_lines = file.readlines()
+            for m_line in m_lines:
+                m_lis = int(m_line)
+                m = m_lis + 1
+                print(m)
+
+            file = open('미림마이스터고.txt', 'w', encoding="UTF-8")
+            file.write(str(m))
+            file.close()
+
+        elif school[0] == '선린인터넷고':
+            file = open('선린인터넷고.txt', 'r', encoding="UTF-8")
+            s_lines = file.readlines()
+            for s_line in s_lines:
+                s_lis = int(s_line)
+                s = s_lis + 1
+                print(s)
+
+            file = open('선린인터넷고.txt', 'w', encoding="UTF-8")
+            file.write(str(s))
+            file.close()
+
+        elif school[0] == '디지털미디어고':
+            file = open('디지털미디어고.txt', 'r', encoding="UTF-8")
+            d_lines = file.readlines()
+            for d_line in d_lines:
+                d_lis = int(d_line)
+                d = d_lis + 1
+                print(d)
+
+            file = open('디지털미디어고.txt', 'w', encoding="UTF-8")
+            file.write(str(d))
+            file.close()
 
     def BackButton(self):
         DONATE.Donate(self.cardigan_donate)
