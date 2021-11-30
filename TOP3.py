@@ -1,5 +1,6 @@
 import tarfile
 from tkinter import *
+# import tkinter.messagebox
 import tkinter
 
 import MAEUM_MAIN
@@ -38,16 +39,16 @@ class Top3:
         print(count_dic[2][0])
 
         t1 = tkinter.Label(top3)
-        t1.config(text=count_dic[0][0])
-        t1.place(x= 300, y=205)
+        t1.config(text=count_dic[0][0], bg='white', font='Times 32 bold italic')
+        t1.place(x= 300, y=190)
 
         t2 = tkinter.Label(top3)
-        t2.config(text=count_dic[1][0])
-        t2.place(x= 300, y=340 )
+        t2.config(text=count_dic[1][0], bg='white', font='Times 32 bold italic')
+        t2.place(x= 300, y=325)
 
         t3 = tkinter.Label(top3)  # 레이블 텍스트
-        t3.config(text=count_dic[2][0])
-        t3.place(x= 300, y=477)  # 레이블 배치
+        t3.config(text=count_dic[2][0], bg='white', font='Times 32 bold italic')
+        t3.place(x= 300, y=462)  # 레이블 배치
 
 
 
