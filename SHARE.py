@@ -4,6 +4,7 @@ from tkinter import *  # tkinter 라이브러리에 모든 함수를 사용하�
 from functools import partial
 
 import MAEUM_MAIN
+import SHIRTS_DONATE
 import THANK_DONATE
 import THANK_SHARE
 
@@ -73,13 +74,14 @@ class Share:
         private_label.place(x=480,y=215)
         total_label = tkinter.Label(text=str(self.total_money), font=("System", 50))
         total_label.place(x=480, y=350)
-        wall_label.mainloop()
+        # wall_label.mainloop()
         # label.mainloop()
 
-        NextButton = tkinter.Button(width=271, height=70,borderwidth=0, command=self.NextButton)        
-        NextButton.place(x=250, y=9)
+        NextButton = tkinter.Button(width=271, height=70, borderwidth=0, command=self.NextButton)
+        NextButton.place(x=580, y=500)
         NextButtonImg = tkinter.PhotoImage(file="img/maenus_nextBtn.png")
         NextButton.config(image=NextButtonImg)
+        NextButton.mainloop()
 
         # label = tkinter.PhotoImage(file="img/your_maeums.png")
         # yourMaumsL = tkinter.Label(image=label)
@@ -93,5 +95,7 @@ class Share:
         # money.append(int(account_number))
         # total_money += int(account_number)
         # print(money)
+    def NextButton(self):
+        THANK_SHARE.Thank_share(self.share)
     def BackButton(self):
         MAEUM_MAIN.Maeum_main(self.share)
