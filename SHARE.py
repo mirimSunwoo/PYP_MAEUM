@@ -23,7 +23,7 @@ class Share:
 
         #share 버튼
         self.shareButton = tkinter.Button(self.share, width=210, height=60, borderwidth=0, command=self.T_D_Button)
-        self.shareButton.place(x=590, y=500)
+        self.shareButton.place(x=595, y=500)
         self.shareButtonImg = tkinter.PhotoImage(file='img/share_btn.png')
         self.shareButton.config(image=self.shareButtonImg)
 
