@@ -1,13 +1,19 @@
 import tkinter
+from cProfile import label
+from tkinter import *  # tkinter 라이브러리에 모든 함수를 사용하겠다.
+from functools import partial
 
 import MAEUM_MAIN
 import THANK_DONATE
+import THANK_SHARE
 
 
 class Share:
+    money = []
+    total_money = 0
     def __init__(self, share):
-        self.share =share
 
+        self.share =share
         #화면 이미지
         self.shareBack = tkinter.PhotoImage(file = "img/share_back.png")
         self.shareBackL = tkinter.Label(image=self.shareBack)
@@ -18,6 +24,7 @@ class Share:
         self.shareButton.place(x=570, y=500)
         self.shareButtonImg = tkinter.PhotoImage(file='img/share_btn.png')
         self.shareButton.config(image=self.shareButtonImg)
+
 
         # 입력
         self.ent1 = tkinter.Entry(share)  # TD라는 창에 입력창 생성
@@ -38,8 +45,44 @@ class Share:
         self.backButtonImg = tkinter.PhotoImage(file="img/back_yellow.PNG")
         self.backButton.config(image=self.backButtonImg)
 
-    def T_D_Button(self):
-        THANK_DONATE.Thank_donate(self.share)
 
+    def T_D_Button(self):
+
+        # wall_label = tkinter.Label(tk, image = label)
+        # wall_label.pack()
+
+        account_number = self.ent3.get()
+        self.money.append(account_number)
+        for x in self.money:
+            self.total_money += int(x)
+        print(self.money)
+        print(self.total_money)
+
+        THANK_SHARE.Thank_share(self.share)
+
+        tk = tkinter.Tk()
+        tk.title("your maeums")
+        tk.geometry("610x388")
+        # tk.place
+
+        wall = PhotoImage(file="img/your_maeums.png")
+        tk.wall_label = Label(image=wall)
+        tk.wall_label.place(x=-2, y=-2)
+        # label = tkinter.Label(tk, text=str(self.total_money), font=("System", 30))
+        # label.place(x=2, y=4)
+        tk.wall_label.mainloop()
+
+        # label = tkinter.PhotoImage(file="img/your_maeums.png")
+        # yourMaumsL = tkinter.Label(image=label)
+        # yourMaumsL.place(x=-2, y=-2)
+        # tk.label.resizable(False, False)
+        # label = tkinter.Label(tk, self.total_money)
+        # tk.mainloop()
+        # money = []
+        # # total_money = 0
+        # account_number = self.ent4.get()
+        # money.append(int(account_number))
+        # total_money += int(account_number)
+        # print(money)
     def BackButton(self):
         MAEUM_MAIN.Maeum_main(self.share)

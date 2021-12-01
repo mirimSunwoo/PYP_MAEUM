@@ -36,12 +36,12 @@ class Maeum_main:
         # home 버튼
         self.homeButton = tkinter.Button(self.main, width=72, height=72, borderwidth=0, command=self.HomeButton)
         self.homeButton.place(x=755, y=30)
-        self.homeButtonImg = tkinter.PhotoImage(file="img/menu_home.png")
+        self.homeButtonImg = tkinter.PhotoImage(file="img/home_y.png")
         self.homeButton.config(image=self.homeButtonImg)
 
     # SHARE 페이지로 넘기기
     def ShareButton(self):
-        SHARE.TD(self.main)
+        SHARE.Share(self.main)
 
     # DONATE 페이지로 넘기기
     def DonateButton(self):
