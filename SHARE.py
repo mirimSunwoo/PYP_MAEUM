@@ -4,7 +4,7 @@ from tkinter import *  # tkinter 라이브러리에 모든 함수를 사용하�
 from functools import partial
 
 import MAEUM_MAIN
-import SHIRTS_DONATE
+# import SHIRTS_DONATE
 import THANK_DONATE
 import THANK_SHARE
 
