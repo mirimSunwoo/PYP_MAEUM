@@ -76,7 +76,7 @@ class Share:
         wall_label.mainloop()
         # label.mainloop()
 
-        NextButton = tkinter.Button(width=271, height=70,borderwidth=0, command=self.NextButton)
+        NextButton = tkinter.Button(width=271, height=70,borderwidth=0, command=self.NextButton)        
         NextButton.place(x=250, y=9)
         NextButtonImg = tkinter.PhotoImage(file="img/maenus_nextBtn.png")
         NextButton.config(image=NextButtonImg)
