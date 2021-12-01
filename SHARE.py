@@ -11,6 +11,7 @@ import THANK_SHARE
 class Share:
     money = []
     total_money = 0
+    account_number = ""
     def __init__(self, share):
 
         self.share =share
@@ -51,26 +52,34 @@ class Share:
         # wall_label = tkinter.Label(tk, image = label)
         # wall_label.pack()
 
-        account_number = self.ent3.get()
-        self.money.append(account_number)
+        self.account_number = self.ent3.get()
+        self.money.append(self.account_number)
         for x in self.money:
             self.total_money += int(x)
         print(self.money)
         print(self.total_money)
 
         THANK_SHARE.Thank_share(self.share)
+        #
+        # tk = tkinter.Tk()
+        # tk.title("your maeums")
+        # # tk.place
 
-        tk = tkinter.Tk()
-        tk.title("your maeums")
-        tk.geometry("610x388")
-        # tk.place
+        wall = PhotoImage(file="img/share_maeumsBack.png")
+        wall_label = Label(image=wall)
+        wall_label.place(x=-2, y=-2)
+        # wall_label.geometry("882x628")
+        private_label = tkinter.Label(text=str(self.account_number),font=("System",50))
+        private_label.place(x=480,y=215)
+        total_label = tkinter.Label(text=str(self.total_money), font=("System", 50))
+        total_label.place(x=480, y=350)
+        wall_label.mainloop()
+        # label.mainloop()
 
-        wall = PhotoImage(file="img/your_maeums.png")
-        tk.wall_label = Label(image=wall)
-        tk.wall_label.place(x=-2, y=-2)
-        # label = tkinter.Label(tk, text=str(self.total_money), font=("System", 30))
-        # label.place(x=2, y=4)
-        tk.wall_label.mainloop()
+        NextButton = tkinter.Button(width=271, height=70,borderwidth=0, command=self.NextButton)
+        NextButton.place(x=250, y=9)
+        NextButtonImg = tkinter.PhotoImage(file="img/maenus_nextBtn.png")
+        NextButton.config(image=NextButtonImg)
 
         # label = tkinter.PhotoImage(file="img/your_maeums.png")
         # yourMaumsL = tkinter.Label(image=label)
