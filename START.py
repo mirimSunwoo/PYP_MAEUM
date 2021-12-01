@@ -30,5 +30,6 @@ if __name__ == '__main__':
     start.geometry("882x628+400+100")
     start.resizable(False, False)
 
+
     start = Start(start)
     start.play()

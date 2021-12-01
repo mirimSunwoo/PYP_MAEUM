@@ -18,6 +18,7 @@ class Thank_donate:
         self.homeButtonImg = tkinter.PhotoImage(file="img/home_y.png")
         self.homeButton.config(image=self.homeButtonImg)
 
+
     # home 페이지로 가기
     def HomeButton(self):
         MAEUM_MAIN.Maeum_main(self.thank_donate)

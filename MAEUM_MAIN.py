@@ -49,6 +49,7 @@ class Maeum_main:
 
     # TOP3 페이지로 넘기기
     def Top3Button(self):
+
         TOP3.Top3(self.main)
 
     # home 페이지로 가기

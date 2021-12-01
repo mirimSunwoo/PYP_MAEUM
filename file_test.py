@@ -3,53 +3,39 @@ s_list = ['1', '2', '3']
 
 if check == s_list[0]:
     file = open('미림마이스터고.txt', 'r', encoding="UTF-8")
-    lines = file.readlines()
-    for line in lines:
-        lis = int(line)
-        m = lis + 1
+    m_lines = file.readlines()
+    for m_line in m_lines:
+        m_lis = int(m_line)
+        m = m_lis + 1
         print(m)
 
-        # lis = line.split(" ")
-        # lis = list(map(int, lis))
-        # print(type(lis))
-
-        #m = int(lis)
-        #print(m)
-        #m += 1
-    #print('미림마이스터고 도네: ', m)
+    file = open('미림마이스터고.txt', 'w', encoding="UTF-8")
+    file.write(str(m))
     file.close()
-    # print(num)
-    #
-    # file = open('미림마이스터고.txt', 'a')
-    # dona_count = int(num) + 1
-    # print(dona_count)
-    # file.write(dona_count)
-    # file.close()
-    #-------------------------------------
-    #     file = open('미림마이스터고.txt', 'a')
 
-    #     file.write('미림 플러스1')
-    #     file.close()
 
-    #     file = open('미림마이스터고.txt', 'r')
-    #     print(file.read())
+elif check == s_list[1]:
+    file = open('선린인터넷고.txt', 'r', encoding="UTF-8")
+    s_lines = file.readlines()
+    for s_line in s_lines:
+        s_lis = int(s_line)
+        s = s_lis + 1
+        print(s)
 
-# elif check == s_list[1]:
-#     file = open('선린인터넷고.txt', 'a')
-#     file.write('선린 플러스1')
-#     file.close()
-#
-#     file = open('선린인터넷고.txt', 'r')
-#     print(file.read())
-#     file.close()
-#
-# elif check == s_list[2]:
-#     file = open('디지털미디어고.txt', 'a')
-#     file.write('디미 플러스1')
-#     file.close()
-#
-#     file = open('디지털미디어고.txt', 'r')
-#     print(file.read())
-#
-# else:
-#     print('ㅇ')
+    file = open('선린인터넷고.txt', 'w', encoding="UTF-8")
+    file.write(str(s))
+    file.close()
+
+elif check == s_list[2]:
+    file = open('디지털미디어고.txt', 'r', encoding="UTF-8")
+    d_lines = file.readlines()
+    for d_line in d_lines:
+        d_lis = int(d_line)
+        d = d_lis + 1
+        print(d)
+
+    file = open('디지털미디어고.txt', 'w', encoding="UTF-8")
+    file.write(str(d))
+    file.close()
+
+
