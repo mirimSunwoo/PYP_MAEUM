@@ -1,7 +1,14 @@
 # PYP_MAEUM
  
 ![background](https://user-images.githubusercontent.com/73941301/143773164-a888a1db-413c-4261-93ff-9f0ee80fa6bf.png)
-
+![화면 캡처 2021-12-11 222228](https://user-images.githubusercontent.com/73941301/145678323-53469081-a4f5-47be-8547-94e834aa30e0.jpg)
+![화면 캡처 2021-12-11 222343](https://user-images.githubusercontent.com/73941301/145678333-f5dbd82d-4f86-4ef3-abb5-03da1ac55302.jpg)
+![화면 캡처 2021-12-11 222435](https://user-images.githubusercontent.com/73941301/145678364-24efe0fc-cc9b-47d2-9254-9393ce694c02.jpg)
+![화면 캡처 2021-12-11 222414](https://user-images.githubusercontent.com/73941301/145678348-e4c6f45d-5b68-4c4b-81dd-15b7f09a5ac1.jpg)
+![화면 캡처 2021-12-11 222455](https://user-images.githubusercontent.com/73941301/145678352-536d9068-9d35-4e0a-adf7-3b07b71008d0.jpg)
+![화면 캡처 2021-12-11 222529](https://user-images.githubusercontent.com/73941301/145678353-a2f466c7-4eeb-4c9d-9de7-f16833ca1b1c.jpg)
+![화면 캡처 2021-12-11 222549](https://user-images.githubusercontent.com/73941301/145678386-fbadbdc6-ff60-4924-806a-f2fff1f1189f.jpg)
+![화면 캡처 2021-12-11 222606](https://user-images.githubusercontent.com/73941301/145678391-541c51fc-89ed-4fd8-80b3-556e9a47eb83.jpg)
 <p>1.PYP_MAEUM폴더에 들어간다</p>
 <p>2.START.py를 실행시킨다</p>
 <p>3.GUI화면이 뜨고 start버튼을 눌러 메뉴화면으로 간다</p>
